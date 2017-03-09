@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iq007"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="iq007.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="284.633" Width="496.768">
+    <Grid>
+
+        <syncfusion:MenuAdv x:Name="menuMain" Height="24" Margin="0,0,-0.6,0" VerticalAlignment="Top" PopUpAnimationType="Fade">
+            <syncfusion:MenuItemAdv Header="Файл"/>
+            <syncfusion:MenuItemAdv Header="View"/>
+            <syncfusion:MenuItemAdv/>
+        </syncfusion:MenuAdv>
+
+    </Grid>
+</Window>
