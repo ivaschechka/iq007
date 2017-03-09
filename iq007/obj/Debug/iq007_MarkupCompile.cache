@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ivan_\OneDrive\Документы\Visual Studio 2015\Projects\iq007\iq007\obj\Debug\
+D:\Work\iq007\iq007\obj\Debug\
 iq007
 none
 false
 DEBUG;TRACE
-C:\Users\ivan_\OneDrive\Документы\Visual Studio 2015\Projects\iq007\iq007\App.xaml
-5-1384814296
+D:\Work\iq007\iq007\App.xaml
+7-1966843086
 
-121167047788
-26-1680242127
-MainWindow.xaml;PupilControllerWindow.xaml;PupilsWindow.xaml;RateControllerWindow.xaml;RatesWindow.xaml;
+161872770617
+27-2021745706
+MainWindow.xaml;PupilControllerWindow.xaml;PupilsWindow.xaml;RateControllerWindow.xaml;RatesWindow.xaml;RecordControllerWindow.xaml;RecordsWindow.xaml;
 
 False
 

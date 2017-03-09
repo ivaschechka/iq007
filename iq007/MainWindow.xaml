@@ -16,6 +16,7 @@
             <syncfusion:MenuItemAdv Header="Правка" Foreground="White" Background="#FF333333" BorderBrush="#FF3A3A3A" Margin="0,0,0,0.2" VerticalAlignment="Stretch">
                 <syncfusion:MenuItemAdv x:Name="rateMenuItem" Header="Тарифы" Click="rateMenuItem_Click" />
                 <syncfusion:MenuItemAdv x:Name="pupilMenuItem" Header="Ученики" Click="pupilMenuItem_Click"  />
+                <syncfusion:MenuItemAdv x:Name="recordMenuItem" Header="Записи" Click="recordMenuItem_Click"  />
                 
                 </syncfusion:MenuItemAdv>
                                    

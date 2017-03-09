@@ -16,5 +16,7 @@ namespace iq007
         }
         public DbSet<Rate> Rates { get; set; }
         public DbSet<Pupil> Pupils { get; set; }
+        public DbSet<Record> Records{ get; set; }
+        public DbSet<Payment> Payments{ get; set; }
     }
 }

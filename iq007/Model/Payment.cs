@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace iq007.Model
 {
-    class Payment : INotifyPropertyChanged
+    public class Payment : INotifyPropertyChanged
     {
         private int paidDays;
         private int passDays;

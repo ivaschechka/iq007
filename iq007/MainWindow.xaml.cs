@@ -40,5 +40,11 @@ namespace iq007
             var p = new PupilControllerWindow();
             p.Show();
         }
+
+        private void recordMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var r = new RecordControllerWindow();
+            r.Show();
+        }
     }
 }
