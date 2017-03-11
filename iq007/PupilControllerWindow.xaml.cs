@@ -44,9 +44,9 @@ namespace iq007
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             // если ни одного объекта не выделено, выходим
-            if (ratelist.SelectedItem == null) return;
+            if (Pupillist.SelectedItem == null) return;
             // получаем выделенный объект
-            Pupil pupil = ratelist.SelectedItem as Pupil;
+            Pupil pupil = Pupillist.SelectedItem as Pupil;
 
             PupilsWindow pupilWindow = new PupilsWindow(new Pupil
             {
@@ -77,9 +77,9 @@ namespace iq007
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             // если ни одного объекта не выделено, выходим
-            if (ratelist.SelectedItem == null) return;
+            if (Pupillist.SelectedItem == null) return;
             // получаем выделенный объект
-            Pupil pupil = ratelist.SelectedItem as Pupil;
+            Pupil pupil = Pupillist.SelectedItem as Pupil;
             db.Pupils.Remove(pupil);
             db.SaveChanges();
         }

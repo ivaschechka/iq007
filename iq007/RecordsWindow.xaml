@@ -4,18 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iq007"
-        xmlns:Model="clr-namespace:iq007.Model" x:Class="iq007.RecordsWindow"
+        xmlns:Model="clr-namespace:iq007.Model" xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="iq007.RecordsWindow"
         mc:Ignorable="d"
         Title="RecordsWindow" Height="397.388" Width="528.358">
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="19,42,0,0" TextWrapping="Wrap" Text="Ученик" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="134,42,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBox.DataContext>
-                <Model:Record/>
-            </ComboBox.DataContext>
-        </ComboBox>
+        <ComboBox x:Name="comboBoxRate" ItemsSource="{Binding Ratelist}" DisplayMemberPath="Name" SelectedValuePath="Id"  HorizontalAlignment="Left" Margin="134,42,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="19,86,0,0" TextWrapping="Wrap" Text="Стоимость" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxCost" Text="{Binding Cost}" HorizontalAlignment="Left" Height="23" Margin="134,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxCost" Text="{Binding Date}" HorizontalAlignment="Left" Height="23" Margin="134,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonAccept" Content="Добавить" HorizontalAlignment="Left" Margin="77,150,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="buttonAccept_Click"/>
         <Button x:Name="button1" Content="Отмена" HorizontalAlignment="Left" Margin="179,150,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
 

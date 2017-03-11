@@ -1,6 +1,7 @@
 ﻿using iq007.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace iq007
     /// </summary>
     public partial class RecordsWindow : Window
     {
+        ApplicationContext db;
+        public List<Rate> Ratelist { get; set; }
         public Record Record { get; private set; }
 
         public RecordsWindow(Record r)
@@ -28,6 +31,10 @@ namespace iq007
             InitializeComponent();
             Record = r;
             DataContext = Record;
+            db = new ApplicationContext();
+            db.Rates.Load();
+            Ratelist = db.Rates.ToList();
+            comboBoxRate.ItemsSource = Ratelist;
         }
 
         private void buttonAccept_Click(object sender, RoutedEventArgs e)

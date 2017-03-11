@@ -10,9 +10,7 @@ namespace iq007.Model
         private int passDays;
 
         public int Id { get; set; }
-
-        public virtual ICollection<Pupil> Pupils { get; set; }
-        public virtual ICollection<Rate> Rates { get; set; }
+        
 
         public int PassDays
         {
@@ -40,12 +38,6 @@ namespace iq007.Model
                 paidDays = value;
                 OnPropertyChanged("PaidDays");
             }
-        }
-
-        public Payment()
-        {
-            Pupils = new List<Pupil>();
-            Rates = new List<Rate>();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

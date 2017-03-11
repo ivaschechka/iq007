@@ -16,8 +16,8 @@ namespace iq007.Model
         private int age;
 
         public int Id { get; set; }
-        public int? RecordId { get; set; }
-        public int? PaymentId { get; set; }
+        public virtual List<Record> Records { get; set; }
+        public virtual List<Payment> Payments { get; set; }
         public string Surname
         {
             get

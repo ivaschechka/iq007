@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Windows;
 using iq007.Model;
 
@@ -39,8 +40,8 @@ namespace iq007
             RecordsWindow recordWindow = new RecordsWindow(new Record
             {
                 Id = record.Id,
-                Pupils = record.Pupils,
-                Rates = record.Rates,
+                Pupil = record.Pupil,
+                Rate = record.Rate,
                 Date = record.Date
             });
 
@@ -50,8 +51,8 @@ namespace iq007
                 record = db.Records.Find(recordWindow.Record.Id);
                 if (record != null)
                 {
-                    record.Pupils = recordWindow.Record.Pupils;
-                    record.Rates = recordWindow.Record.Rates;
+                    record.Pupil = recordWindow.Record.Pupil;
+                    record.Rate = recordWindow.Record.Rate;
                     record.Date = recordWindow.Record.Date;
                     db.Entry(record).State = EntityState.Modified;
                     db.SaveChanges();

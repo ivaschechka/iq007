@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
 namespace iq007.Model
@@ -9,9 +11,8 @@ namespace iq007.Model
         private int cost;
 
         public int Id { get; set; }
-        public int? RecordId { get; set; }
-        public int? PaymentId { get; set; }
-
+        public virtual List<Record> Records { get; set; }
+        public virtual List<Payment> Payments { get; set; }
         public string Name
         {
             get { return name; }

@@ -15,8 +15,10 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Name}" FontSize="16" />
-                        <TextBlock Text="{Binding Cost}" FontSize="12" />
+                        <TextBlock Text="{Binding Pupil.Surname}" FontSize="16" />
+                        <TextBlock Text="{Binding Pupil.Name}" FontSize="16" />
+                        <TextBlock Text="{Binding Rate.Cost}" FontSize="12" />
+                        <TextBlock Text="{Binding Date}" FontSize="22" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

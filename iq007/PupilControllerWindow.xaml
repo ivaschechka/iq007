@@ -11,7 +11,7 @@
             <RowDefinition />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <ListBox x:Name="ratelist" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="225" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
+        <ListBox x:Name="Pupillist" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="225" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
