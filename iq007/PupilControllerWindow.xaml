@@ -18,7 +18,6 @@
                         <TextBlock Text="{Binding Surname}" FontSize="16" />
                         <TextBlock Text="{Binding Name}" FontSize="12" />
                         <TextBlock Text="{Binding Midname}" FontSize="12" />
-                        <TextBlock Text="{Binding Age}" FontSize="12" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

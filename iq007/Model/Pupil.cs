@@ -13,7 +13,6 @@ namespace iq007.Model
         private string surname;
         private string name;
         private string midname;
-        private int age;
 
         public int Id { get; set; }
         public virtual List<Record> Records { get; set; }
@@ -57,20 +56,6 @@ namespace iq007.Model
             {
                 midname = value;
                 OnPropertyChanged("Midname");
-            }
-        }
-
-        public int Age
-        {
-            get
-            {
-                return age;
-            }
-
-            set
-            {
-                age = value;
-                OnPropertyChanged("Age");
             }
         }
 

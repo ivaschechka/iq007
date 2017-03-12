@@ -14,8 +14,6 @@
         <TextBox x:Name="textBoxName" Text="{Binding Name}" HorizontalAlignment="Left" Height="23" Margin="134,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="19,121,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxMidName" Text="{Binding Midname}" HorizontalAlignment="Left" Height="23" Margin="134,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="19,155,0,0" TextWrapping="Wrap" Text="Возраст" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxAge" Text="{Binding Age}" HorizontalAlignment="Left" Height="23" Margin="134,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonAccept" Content="Добавить" HorizontalAlignment="Left" Margin="77,191,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="buttonAccept_Click"/>
         <Button x:Name="button1" Content="Отмена" HorizontalAlignment="Left" Margin="179,191,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
 

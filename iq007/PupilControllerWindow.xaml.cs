@@ -53,8 +53,7 @@ namespace iq007
                 Id = pupil.Id,
                 Surname = pupil.Surname,
                 Name = pupil.Name,
-                Midname = pupil.Midname,
-                Age = pupil.Age
+                Midname = pupil.Midname
 
             });
 
@@ -67,7 +66,6 @@ namespace iq007
                     pupil.Surname = pupilWindow.Pupil.Surname;
                     pupil.Name = pupilWindow.Pupil.Name;
                     pupil.Midname = pupilWindow.Pupil.Midname;
-                    pupil.Age = pupilWindow.Pupil.Age;
                     db.Entry(pupil).State = EntityState.Modified;
                     db.SaveChanges();
                 }

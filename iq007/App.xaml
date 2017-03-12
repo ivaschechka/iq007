@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:iq007"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="user" UriSource="Resources/boy.png" />
     </Application.Resources>
 </Application>

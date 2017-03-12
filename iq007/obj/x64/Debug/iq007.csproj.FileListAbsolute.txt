@@ -20,7 +20,6 @@ C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\RatesWindow.g.cs
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\RecordControllerWindow.g.cs
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\RecordsWindow.g.cs
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\App.g.cs
-C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007_MarkupCompile.cache
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007_MarkupCompile.lref
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\MainWindow.baml
@@ -35,4 +34,9 @@ C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007.Properties.Resources
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007.csproj.GenerateResource.Cache
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007.exe
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007.pdb
+C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\View\AddPupilPage.g.cs
+C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\View\AddPupilPage.baml
+C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\App.baml
+C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\View\ListPupilsPage.g.cs
+C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\View\ListPupilsPage.baml
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\x64\Debug\iq007.csprojResolveAssemblyReference.cache
