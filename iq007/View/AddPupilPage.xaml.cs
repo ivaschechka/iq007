@@ -28,7 +28,7 @@ namespace iq007.View
         public AddPupilPage()
         {
             InitializeComponent();
-            image.Source=new BitmapImage(new Uri(@"C:\Users\ivan_\Source\Repos\iq007\iq007\Resources\boy.png"));
+            image.Source=new BitmapImage(new Uri(@"D:\Work\iq007\iq007\Resources\boy.png"));
             db=new ApplicationContext();
             db.Pupils.Load();
         }

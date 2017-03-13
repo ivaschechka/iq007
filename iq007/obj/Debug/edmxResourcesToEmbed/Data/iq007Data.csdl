@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="iq007Data" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="iq007DataContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RatesSet" EntityType="iq007Data.Rates" />
+    <EntitySet Name="PupilsSet" EntityType="iq007Data.Pupils" />
+    <EntitySet Name="PaymentsSet" EntityType="iq007Data.Payments" />
+    <EntitySet Name="RecordsSet" EntityType="iq007Data.Records" />
+    <AssociationSet Name="RatesPayments" Association="iq007Data.RatesPayments">
+      <End Role="Rates" EntitySet="RatesSet" />
+      <End Role="Payments" EntitySet="PaymentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="RatesRecords" Association="iq007Data.RatesRecords">
+      <End Role="Rates" EntitySet="RatesSet" />
+      <End Role="Records" EntitySet="RecordsSet" />
+    </AssociationSet>
+    <AssociationSet Name="PupilsPayments" Association="iq007Data.PupilsPayments">
+      <End Role="Pupils" EntitySet="PupilsSet" />
+      <End Role="Payments" EntitySet="PaymentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="PupilsRecords" Association="iq007Data.PupilsRecords">
+      <End Role="Pupils" EntitySet="PupilsSet" />
+      <End Role="Records" EntitySet="RecordsSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Rates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Cost" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Payments" Relationship="iq007Data.RatesPayments" FromRole="Rates" ToRole="Payments" />
+    <NavigationProperty Name="Record" Relationship="iq007Data.RatesRecords" FromRole="Rates" ToRole="Records" />
+  </EntityType>
+  <EntityType Name="Pupils">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Midname" Type="String" Nullable="false" />
+    <Property Name="Age" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Payments" Relationship="iq007Data.PupilsPayments" FromRole="Pupils" ToRole="Payments" />
+    <NavigationProperty Name="Records" Relationship="iq007Data.PupilsRecords" FromRole="Pupils" ToRole="Records" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PupilId" Type="Int32" Nullable="false" />
+    <Property Name="RateId" Type="Int32" Nullable="false" />
+    <Property Name="PaidDays" Type="Int16" Nullable="false" />
+    <Property Name="PassDays" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Rates" Relationship="iq007Data.RatesPayments" FromRole="Payments" ToRole="Rates" />
+    <NavigationProperty Name="Pupils" Relationship="iq007Data.PupilsPayments" FromRole="Payments" ToRole="Pupils" />
+  </EntityType>
+  <EntityType Name="Records">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PupilId" Type="Int32" Nullable="false" />
+    <Property Name="RateId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" />
+    <NavigationProperty Name="Rates" Relationship="iq007Data.RatesRecords" FromRole="Records" ToRole="Rates" />
+    <NavigationProperty Name="Pupils" Relationship="iq007Data.PupilsRecords" FromRole="Records" ToRole="Pupils" />
+  </EntityType>
+  <Association Name="RatesPayments">
+    <End Type="iq007Data.Rates" Role="Rates" Multiplicity="1" />
+    <End Type="iq007Data.Payments" Role="Payments" Multiplicity="*" />
+  </Association>
+  <Association Name="RatesRecords">
+    <End Type="iq007Data.Rates" Role="Rates" Multiplicity="1" />
+    <End Type="iq007Data.Records" Role="Records" Multiplicity="*" />
+  </Association>
+  <Association Name="PupilsPayments">
+    <End Type="iq007Data.Pupils" Role="Pupils" Multiplicity="1" />
+    <End Type="iq007Data.Payments" Role="Payments" Multiplicity="*" />
+  </Association>
+  <Association Name="PupilsRecords">
+    <End Type="iq007Data.Pupils" Role="Pupils" Multiplicity="1" />
+    <End Type="iq007Data.Records" Role="Records" Multiplicity="*" />
+  </Association>
+</Schema>

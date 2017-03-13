@@ -81,9 +81,7 @@ D:\Work\iq007\iq007\bin\Debug\System.Data.SQLite.EF6.dll
 D:\Work\iq007\iq007\bin\Debug\System.Data.SQLite.Linq.dll
 D:\Work\iq007\iq007\bin\Debug\EntityFramework.xml
 D:\Work\iq007\iq007\bin\Debug\EntityFramework.SqlServer.xml
-D:\Work\iq007\iq007\bin\Debug\Syncfusion.Shared.WPF.xml
 D:\Work\iq007\iq007\bin\Debug\System.Data.SQLite.xml
-D:\Work\iq007\iq007\obj\Debug\iq007.csprojResolveAssemblyReference.cache
 D:\Work\iq007\iq007\obj\Debug\MainWindow.g.cs
 D:\Work\iq007\iq007\obj\Debug\PupilControllerWindow.g.cs
 D:\Work\iq007\iq007\obj\Debug\PupilsWindow.g.cs
@@ -92,7 +90,6 @@ D:\Work\iq007\iq007\obj\Debug\RatesWindow.g.cs
 D:\Work\iq007\iq007\obj\Debug\RecordControllerWindow.g.cs
 D:\Work\iq007\iq007\obj\Debug\RecordsWindow.g.cs
 D:\Work\iq007\iq007\obj\Debug\App.g.cs
-D:\Work\iq007\iq007\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Work\iq007\iq007\obj\Debug\iq007_MarkupCompile.cache
 D:\Work\iq007\iq007\obj\Debug\iq007_MarkupCompile.lref
 D:\Work\iq007\iq007\obj\Debug\MainWindow.baml
@@ -142,3 +139,12 @@ C:\Users\ivan_\Source\Repos\iq007\iq007\obj\Debug\RecordsWindow.baml
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\Debug\iq007.g.resources
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\Debug\iq007.Properties.Resources.resources
 C:\Users\ivan_\Source\Repos\iq007\iq007\obj\Debug\iq007.csproj.GenerateResource.Cache
+D:\Work\iq007\iq007\obj\Debug\View\AddPupilPage.g.cs
+D:\Work\iq007\iq007\obj\Debug\View\ListPupilsPage.g.cs
+D:\Work\iq007\iq007\obj\Debug\App.baml
+D:\Work\iq007\iq007\obj\Debug\View\AddPupilPage.baml
+D:\Work\iq007\iq007\obj\Debug\View\ListPupilsPage.baml
+D:\Work\iq007\iq007\obj\Debug\View\AddRecordPage.g.cs
+D:\Work\iq007\iq007\obj\Debug\View\AddRecordPage.baml
+D:\Work\iq007\iq007\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Work\iq007\iq007\obj\Debug\iq007.csprojResolveAssemblyReference.cache

@@ -9,7 +9,7 @@
       Title="ListPupilsPage">
 
     <Grid>
-        <DataGrid x:Name="Pupillist" AutoGenerateColumns="false" ItemsSource="{Binding}" IsReadOnly="True" BorderThickness="0,1" HorizontalGridLinesBrush="#FFB1B1B1" VerticalGridLinesBrush="#FFB1B1B1" AlternatingRowBackground="#FFE4E4E4" FontSize="16" FontFamily="Calibri Light" HeadersVisibility="Column" Loaded="Pupillist_Loaded" >
+        <DataGrid x:Name="Pupillist" AutoGenerateColumns="false" ItemsSource="{Binding}" IsReadOnly="True" BorderThickness="0,1" HorizontalGridLinesBrush="#FFB1B1B1" VerticalGridLinesBrush="#FFB1B1B1" AlternatingRowBackground="#FFE4E4E4" FontSize="16" FontFamily="Calibri Light" HeadersVisibility="Column" Loaded="Pupillist_Loaded" Background="#FFEBEDF0" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="200" 
                              Binding="{Binding Path=Surname}"/>
@@ -30,6 +30,21 @@
                     <Setter Property="BorderBrush" Value="White" />
                 </Style>
             </DataGrid.ColumnHeaderStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected"
+                        Value="True">
+                            <Setter Property="Background"
+                        Value="Silver" />
+                            <Setter Property="Foreground"
+                        Value="Black" />
+                            <Setter Property="BorderBrush"
+                        Value="Silver" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
             <DataGrid.CellStyle>
                 <Style TargetType="DataGridCell">
                     <Style.Triggers>

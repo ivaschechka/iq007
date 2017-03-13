@@ -23,7 +23,7 @@
 
 
         </syncfusion:MenuAdv>
-        <Frame x:Name="frame" Source="View/ListPupilsPage.xaml" Margin="0,27,0.4,0.2"/>
+        <Frame x:Name="frame" Source="View/AddRecordPage.xaml" Margin="0,27,0.4,0.2"/>
 
     </Grid>
 </Window>

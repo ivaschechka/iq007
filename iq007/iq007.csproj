@@ -122,11 +122,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Filter\ContainTextFilterCreator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Payment.cs" />
     <Compile Include="Model\Pupil.cs" />
+    <Compile Include="Model\PupilList.cs" />
     <Compile Include="Model\Record.cs" />
     <Compile Include="PupilControllerWindow.xaml.cs">
       <DependentUpon>PupilControllerWindow.xaml</DependentUpon>
@@ -143,8 +145,12 @@
     <Compile Include="RecordsWindow.xaml.cs">
       <DependentUpon>RecordsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\FilterComboBox.cs" />
     <Compile Include="View\AddPupilPage.xaml.cs">
       <DependentUpon>AddPupilPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRecordPage.xaml.cs">
+      <DependentUpon>AddRecordPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ListPupilsPage.xaml.cs">
       <DependentUpon>ListPupilsPage.xaml</DependentUpon>
@@ -187,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AddPupilPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddRecordPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
