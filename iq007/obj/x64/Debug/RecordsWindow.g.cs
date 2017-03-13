@@ -10,8 +10,22 @@
 //------------------------------------------------------------------------------
 
 using Syncfusion;
+using Syncfusion.UI.Xaml.Controls.DataPager;
+using Syncfusion.UI.Xaml.Grid;
+using Syncfusion.UI.Xaml.Grid.RowFilter;
+using Syncfusion.UI.Xaml.TreeGrid;
 using Syncfusion.Windows;
+using Syncfusion.Windows.Collections;
+using Syncfusion.Windows.ComponentModel;
+using Syncfusion.Windows.Controls.Cells;
+using Syncfusion.Windows.Controls.Grid;
+using Syncfusion.Windows.Controls.Scroll;
+using Syncfusion.Windows.Controls.VirtualTreeView;
+using Syncfusion.Windows.Data;
+using Syncfusion.Windows.Diagnostics;
+using Syncfusion.Windows.GridCommon;
 using Syncfusion.Windows.Shared;
+using Syncfusion.Windows.Styles;
 using Syncfusion.Windows.Tools.Controls;
 using System;
 using System.Diagnostics;

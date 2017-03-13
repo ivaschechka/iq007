@@ -1,0 +1,19 @@
+﻿<syncfusion:ChromelessWindow x:Class="iq007.MainWindow"
+                             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                             xmlns:local="clr-namespace:FilterRow"
+                             xmlns:interaction="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                             Icon="App.ico"
+                             syncfusion:LayoutControl.SetMetroMode="True">
+    <Grid>
+        <syncfusion:LayoutControl HeaderDescriptionText="This sample showcases the filter row functionalities of SfDataGrid."
+                                  HeaderText="Filter Row"
+                                  LayoutMode="Metro"
+                                  UserOptionsVisibility="Collapsed">
+
+
+
+        </syncfusion:LayoutControl>
+    </Grid>
+</syncfusion:ChromelessWindow>

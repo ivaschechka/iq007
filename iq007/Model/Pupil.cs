@@ -17,6 +17,8 @@ namespace iq007.Model
         public int Id { get; set; }
         public virtual List<Record> Records { get; set; }
         public virtual List<Payment> Payments { get; set; }
+
+        public String FullName { get { return $"{Surname} {Name} {Midname}"; } }
         public string Surname
         {
             get

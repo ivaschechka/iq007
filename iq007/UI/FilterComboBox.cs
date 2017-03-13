@@ -87,7 +87,10 @@ namespace iq007.UI
         private static String GetText(Object item, FilterComboBox comboBox)
         {
             String propertyName = (String)comboBox.GetValue(TextSearch.TextPathProperty);
-            return (String)GetPropertyValue(item, propertyName);
+            var str= (String)GetPropertyValue(item, propertyName);
+            if (str.Length > 0)
+                return str;
+            return "";
         }
 
         private static object GetPropertyValue(object src, string propertyName)

@@ -10,16 +10,16 @@
       d:DesignHeight="411" d:DesignWidth="963"
       Title="AddRecordPage">
 
-    <Grid>
+    <Grid Background="#FFEAEAEA">
         <UI:FilterComboBox
             x:Name="comboBox"
             IsEditable="True"            
             TextSearch.TextPath="FullName"
             HorizontalAlignment="Left"
-            Margin="161,123,0,0"            
+            Margin="10,60,0,0"            
             VerticalAlignment="Top" 
-            Width="647"
-            Height="39">
+            Width="422"
+            Height="39" FontFamily="Calibri" FontSize="18">
             <UI:FilterComboBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="LightYellow" BorderThickness="1.5" Width="{Binding ElementName=comboBox, Path=Width}">
@@ -44,6 +44,7 @@
                 <list:PupilList></list:PupilList>
             </UI:FilterComboBox.ItemsSource>
         </UI:FilterComboBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Ученик" VerticalAlignment="Top" FontSize="22"/>
 
     </Grid>
 </Page>

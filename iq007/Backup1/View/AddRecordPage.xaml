@@ -1,0 +1,50 @@
+﻿<Page x:Class="iq007.View.AddRecordPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:iq007.View"
+      xmlns:UI="clr-namespace:iq007.UI"
+      xmlns:list="clr-namespace:iq007.Model"
+      mc:Ignorable="d" 
+      d:DesignHeight="411" d:DesignWidth="963"
+      Title="AddRecordPage">
+
+    <Grid Background="#FFEAEAEA">
+        <UI:FilterComboBox
+            x:Name="comboBox"
+            IsEditable="True"            
+            TextSearch.TextPath="FullName"
+            HorizontalAlignment="Left"
+            Margin="10,60,0,0"            
+            VerticalAlignment="Top" 
+            Width="422"
+            Height="39" FontFamily="Calibri" FontSize="18">
+            <UI:FilterComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="LightYellow" BorderThickness="1.5" Width="{Binding ElementName=comboBox, Path=Width}">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Thin">Фамилия:</TextBlock>
+                                <TextBlock FontWeight="Bold" Text="{Binding Surname}" ></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Thin">Имя:</TextBlock>
+                                <TextBlock FontWeight="Bold" Text="{Binding Name}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Thin">Отчество:</TextBlock>
+                                <TextBlock FontWeight="Bold" Text="{Binding Midname}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </UI:FilterComboBox.ItemTemplate>
+            <UI:FilterComboBox.ItemsSource>
+                <list:PupilList></list:PupilList>
+            </UI:FilterComboBox.ItemsSource>
+        </UI:FilterComboBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Ученик" VerticalAlignment="Top" FontSize="22"/>
+
+    </Grid>
+</Page>
