@@ -22,6 +22,7 @@ namespace iq007
     {
         public MainWindow()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru");
             InitializeComponent();
         }
 
@@ -46,6 +47,21 @@ namespace iq007
         {
             var r = new RecordControllerWindow();
             r.Show();
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Frame.NavigationService.Navigate(new Uri("View/PupilsPage.xaml", UriKind.Relative));
+        }
+
+        private void Teacher_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Frame.NavigationService.Navigate(new Uri("View/TeachersPage.xaml", UriKind.Relative));
+        }
+
+        private void Payments_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Frame.NavigationService.Navigate(new Uri("View/PaymentsPage.xaml", UriKind.Relative));
         }
     }
 }

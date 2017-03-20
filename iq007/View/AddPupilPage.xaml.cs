@@ -24,13 +24,17 @@ namespace iq007.View
     public partial class AddPupilPage : Page
     {
         ApplicationContext db;
+        List<Branch> _listBranches;
 
         public AddPupilPage()
         {
             InitializeComponent();
-            image.Source=new BitmapImage(new Uri(@"D:\Work\iq007\iq007\Resources\boy.png"));
             db=new ApplicationContext();
             db.Pupils.Load();
+            db.Branches.Load();
+            db.PupilsBranches.Load();
+            _listBranches = db.Branches.Local.ToList();
+            ListBranches.ItemsSource = _listBranches;
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
@@ -42,23 +46,33 @@ namespace iq007.View
                 {
                     block.Text = "";
                 }
-                else
-                {
-                    continue;
-                }
             }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Pupil _pupil = new Pupil
+            var _pupil = new Pupil
             {
                 Surname = SurnameTextBox1.Text,
                 Name = NameTextBox.Text,
                 Midname = MidNameTextBox.Text
             };
             db.Pupils.Add(_pupil);
+            var pupilsBranch = new PupilsBranch
+            {
+                Branch = (Branch)ListBranches.SelectionBoxItem,
+                Pupil = _pupil
+            };
+            db.PupilsBranches.Add(pupilsBranch);
             db.SaveChanges();
+            foreach (var window in App.Current.Windows)
+            {
+                if (window is MainWindow)
+                {
+                    var w = (MainWindow) window;
+                    w.Frame.Refresh();
+                }
+            }
         }
     }
 }

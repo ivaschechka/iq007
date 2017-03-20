@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
 namespace iq007.Model
@@ -10,7 +11,13 @@ namespace iq007.Model
         private int passDays;
 
         public int Id { get; set; }
-        
+
+        public int? RateId { get; set; }
+        public int? PupilId { get; set; }
+        [ForeignKey("RateId")]
+        public virtual Rate Rate { get; set; }  // навигационное свойство
+        [ForeignKey("PupilId")]
+        public virtual Pupil Pupil { get; set; }  // навигационное свойство
 
         public int PassDays
         {

@@ -18,5 +18,8 @@ namespace iq007
         public DbSet<Pupil> Pupils { get; set; }
         public DbSet<Record> Records{ get; set; }
         public DbSet<Payment> Payments{ get; set; }
+        public DbSet<Branch> Branches { get; set; }
+        public DbSet<PupilsBranch> PupilsBranches{ get; set; }
+        public DbSet<Teacher> Teachers{ get; set; }
     }
 }

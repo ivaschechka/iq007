@@ -6,47 +6,48 @@
       xmlns:local="clr-namespace:iq007.View"
       mc:Ignorable="d"
       Title="AddPupilPage" >
+    <Page.Effect>
+        <DropShadowEffect BlurRadius="1" ShadowDepth="1" Direction="0" Color="#FFEEEEEE"/>
+    </Page.Effect>
 
-    <Grid x:Name="MainGrid" Background="#FFEBEDF0">
-        <Image x:Name="image" Source="{StaticResource ResourceKey=user}" Margin="20,20,0,0" HorizontalAlignment="Left" Width="157" Height="150" VerticalAlignment="Top">
-            <Image.Effect>
-                <DropShadowEffect Opacity="0"/>
-            </Image.Effect>
-        </Image>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="212,10,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16"/>
-        <TextBox x:Name="SurnameTextBox1" Margin="212,37,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="195" BorderThickness="1" FontFamily="Calibri Light">
+    <Grid x:Name="MainGrid" Background="White" Width="256" Margin="0">
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="31,236,0,0" TextWrapping="Wrap" Text="Фамилия" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16" VerticalAlignment="Top"/>
+        <TextBox x:Name="SurnameTextBox1" Margin="31,260.53,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="195" BorderThickness="1" FontFamily="Calibri Light" Height="35" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center">
             <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEBEDF0" Offset="1"/>
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="#FFEBEDF0" Offset="0.954"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEBEBEB" Offset="0.003"/>
+                    <GradientStop Color="#FFE2E2E2" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="212,69,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="212,90,0,0" TextWrapping="Wrap" Width="195"  Height="23" VerticalAlignment="Top" FontFamily="Calibri Light">
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="31,300,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="31,319.53,0,0" TextWrapping="Wrap" Width="195"  Height="35" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="16" VerticalContentAlignment="Center">
             <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEBEDF0" Offset="1"/>
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="#FFEBEDF0" Offset="0.954"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEBEBEB" Offset="0.003"/>
+                    <GradientStop Color="#FFE2E2E2" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="212,121,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16"/>
-        <TextBox x:Name="MidNameTextBox" HorizontalAlignment="Left" Margin="212,148,0,0" TextWrapping="Wrap" Width="195" Height="22" VerticalAlignment="Top" FontFamily="Calibri Light">
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="31,359.398,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16"/>
+        <TextBox x:Name="MidNameTextBox" HorizontalAlignment="Left" Margin="30.8,378.928,0,0" TextWrapping="Wrap" Width="195" Height="35" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="16" VerticalContentAlignment="Center">
             <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEBEDF0" Offset="1"/>
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="#FFEBEDF0" Offset="0.954"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEBEBEB" Offset="0.003"/>
+                    <GradientStop Color="#FFE2E2E2" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Left" Margin="232,197,0,0" VerticalAlignment="Top" Width="81" Height="23" Click="AddButton_Click" BorderThickness="0" FontFamily="Calibri Light"/>
-        <Button x:Name="ClearButton" Content="Очистить" HorizontalAlignment="Left" Margin="332,197,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ClearButton_Click" FontFamily="Calibri Light"/>
-        <TextBlock x:Name="SurnametextBlock" Margin="30,175,246,0" TextWrapping="Wrap" Text="{Binding ElementName=SurnameTextBox1,Path=Text}" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="NametextBlock" Margin="29,196,0,3" TextWrapping="Wrap" Text="{Binding ElementName=NameTextBox,Path=Text}" FontSize="16" HorizontalAlignment="Left" Width="132"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="162" Margin="30,10,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="AddButton" Content="Добавить" HorizontalAlignment="Left" Margin="55,502,0,0" VerticalAlignment="Top" Width="81" Height="23" Click="AddButton_Click" BorderThickness="1" FontFamily="Calibri Light" IsDefault="True"/>
+        <Button x:Name="ClearButton" Content="Очистить" HorizontalAlignment="Left" Margin="151,502,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ClearButton_Click" FontFamily="Calibri Light" IsCancel="True"/>
+        <Border BorderBrush="#FF8E8E8E" BorderThickness="1" Height="194" Margin="30,30,30,0" VerticalAlignment="Top">
+            <Image x:Name="image"  Margin="19,0" HorizontalAlignment="Stretch" Width="Auto" Source="boy.png" Height="155.4" VerticalAlignment="Bottom">
+                <Image.Effect>
+                    <DropShadowEffect Opacity="0"/>
+                </Image.Effect>
+            </Image>
+        </Border>
+        <ComboBox x:Name="ListBranches" DisplayMemberPath="Name" SelectedValuePath="Id" HorizontalAlignment="Left" Margin="31,439,0,0" Width="195" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Height="35" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="31,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri Light" FontSize="16"><Run Text="Филиал"/><LineBreak/><Run/></TextBlock>
     </Grid>
 </Page>

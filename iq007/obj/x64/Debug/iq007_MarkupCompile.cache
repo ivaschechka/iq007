@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ivan_\Source\Repos\iq007\iq007\App.xaml
-11638757127
+161683749346
 
-23352969329
+33907546987
 34748548090
-MainWindow.xaml;PupilControllerWindow.xaml;PupilsWindow.xaml;RateControllerWindow.xaml;RatesWindow.xaml;RecordControllerWindow.xaml;RecordsWindow.xaml;View\AddPupilPage.xaml;View\AddRecordPage.xaml;View\ListPupilNPage.xaml;View\ListPupilsPage.xaml;
+MainWindow.xaml;PupilControllerWindow.xaml;PupilsWindow.xaml;RateControllerWindow.xaml;RatesWindow.xaml;RecordControllerWindow.xaml;RecordsWindow.xaml;View\AddPayPage.xaml;View\AddPupilPage.xaml;View\AddRecordPage.xaml;View\AddTeacherPage.xaml;View\PaymentsPage.xaml;View\ListPupilNPage.xaml;View\ListPupilsPage.xaml;View\PupilsPage.xaml;View\TeachersPage.xaml;
 
 False
 

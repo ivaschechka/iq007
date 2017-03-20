@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:iq007"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <BitmapImage x:Key="user" UriSource="Resources/boy.png" />
+        <Style x:Key="MouseEnter">
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Background" Value="#FFDDDDDD"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>

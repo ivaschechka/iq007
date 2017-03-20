@@ -1,17 +1,86 @@
-﻿<syncfusion:ChromelessWindow x:Class="iq007.MainWindow"
+﻿<schedule:ChromelessWindow
                              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-                             xmlns:interaction="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-                             syncfusion:LayoutControl.SetMetroMode="True">
-    <Grid>
-        <syncfusion:LayoutControl HeaderDescriptionText="Это временное приложение"
-                                  HeaderText="IQ007"
-                                  LayoutMode="Metro"
-                                  UserOptionsVisibility="Collapsed">
-        </syncfusion:LayoutControl>
-        <Frame
-                                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Source="View/ListPupilNPage.xaml" Margin="0,100,-0.4,-0.4"/>
+                             xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF"
+                             xmlns:schedule="http://schemas.syncfusion.com/wpf"
+                             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="iq007.MainWindow"
+                             Title="АРМ" 
+                             Height="350" 
+                             Width="525"         
+                             schedule:SkinStorage.VisualStyle="Metro"
+                             AllowsTransparency="True"
+                             UseNativeChrome="True" 
+                             TitleBarHeight="40"
+                             Foreground="White"
+                             WindowStartupLocation="CenterScreen" TitleBarBackground="#FF161D20" TitleBarForeground="White" ResizeBorderBrush="#FF161D20" MinWidth="1000" MinHeight="700"
+                             >
+    <schedule:ChromelessWindow.Effect>
+        <DropShadowEffect/>
+    </schedule:ChromelessWindow.Effect>
+    <Grid x:Name="LayoutRoot" Background="#FFE6E6E6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+               Source="View/PupilsPage.xaml" 
+               Grid.Column="1"
+               x:Name="Frame"
+               NavigationUIVisibility="Hidden" Margin="30"/>
+        <StackPanel Grid.Column="0" 
+                    Margin="0,-1,0,0" 
+                    Background="White">
+            <StackPanel.Effect>
+                <DropShadowEffect Direction="0" Color="#FF747474" ShadowDepth="1"/>
+            </StackPanel.Effect>
+            <Grid Height="130" 
+                  Background="#FFD35B2B"
+                  >
+                <Image x:Name="image" Margin="0,-24.017,79.614,-15.751" Source="logo.png" RenderTransformOrigin="0.5,0.5" >
+                    <Image.Effect>
+                        <DropShadowEffect Color="#FF909090" BlurRadius="7"/>
+                    </Image.Effect>
+                </Image>
+                <Image x:Name="image2" HorizontalAlignment="Right" Margin="0,10,0,0" Width="111.2" Source="fox.png"/>
+
+            </Grid>
+            <Grid Height="40" Style="{StaticResource MouseEnter}" MouseDown="Grid_MouseDown">
+                <TextBlock x:Name="TextBlockPupils" 
+                           HorizontalAlignment="Left" 
+                           TextWrapping="Wrap" 
+                           Text="Ученики" 
+                           FontSize="18.667" 
+                           Width="250"
+                           Padding="60,0,0,0" 
+                           VerticalAlignment="Center" 
+                           Foreground="#FF181818"
+                           />
+            </Grid>
+            <Grid Height="40" Style="{StaticResource MouseEnter}" MouseDown="Teacher_MouseDown">
+                <TextBlock x:Name="TextBlockTeachers" 
+                           HorizontalAlignment="Left" 
+                           TextWrapping="Wrap" 
+                           Text="Преподаватели" 
+                           FontSize="18.667" 
+                           Width="250"
+                           Padding="60,0,0,0" 
+                           VerticalAlignment="Center" 
+                           Foreground="#FF181818"
+                           />
+            </Grid>
+            <Grid Height="40" Style="{StaticResource MouseEnter}" MouseDown="Payments_MouseDown">
+                <TextBlock x:Name="TextBlockPayments" 
+                           HorizontalAlignment="Left" 
+                           TextWrapping="Wrap" 
+                           Text="Оплата" 
+                           FontSize="18.667" 
+                           Width="250"
+                           Padding="60,0,0,0" 
+                           VerticalAlignment="Center" 
+                           Foreground="#FF181818"
+                           />
+            </Grid>
+        </StackPanel>
     </Grid>
-    
-</syncfusion:ChromelessWindow>
+
+</schedule:ChromelessWindow>
