@@ -1,4 +1,4 @@
-﻿<Page x:Class="iq007.View.AddPayPage"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:iq007.View"
       xmlns:ui="clr-namespace:iq007.UI"
       xmlns:model="clr-namespace:iq007.Model"
+      xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="iq007.View.AddPayPage"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="257"
       Title="AddPayPage" Background="White">
@@ -36,7 +37,7 @@
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Text="Ученик" VerticalAlignment="Top" FontSize="22" Foreground="#FF6B6B6B"/>
             <Grid>
                 <ui:FilterComboBox
-                    x:Name="comboBox"
+                    x:Name="comboBoxName"
                     IsEditable="True"            
                     TextSearch.TextPath="FullName"
                     HorizontalAlignment="Left"
@@ -74,7 +75,12 @@
                 <StackPanel Margin="0,0,-0.2,-12.2"/>
             </Grid>
             <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,15,0,10" TextWrapping="Wrap" Text="Тариф" VerticalAlignment="Top" FontSize="22" Foreground="#FF6B6B6B"/>
-            <ComboBox x:Name="comboBox1" Margin="10,0,9.8,0" Height="35"/>
+            <syncfusion:ComboBoxAdv  x:Name="comboBox1" Margin="10,0,9.8,0" Height="35" BorderBrush="#FFACACAC" Background="White" BorderThickness="1" DisplayMemberPath="Name" SelectedValuePath="Id" FontSize="18" FontFamily="Calibri" >
+
+            </syncfusion:ComboBoxAdv>
+            <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,15,0,10" TextWrapping="Wrap" Text="Количество" VerticalAlignment="Top" FontSize="22" Foreground="#FF6B6B6B"/>
+            <TextBox x:Name="textBox" Height="35" TextWrapping="Wrap" Margin="10,0,9.8,0" BorderBrush="#FFACACAC" Text="0" FontSize="18" VerticalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button x:Name="Paybutton" Content="Оплатить" Height="35" Margin="10,10,9.8,0" IsDefault="True" Click="Paybutton_Click"/>
 
         </StackPanel>
 
